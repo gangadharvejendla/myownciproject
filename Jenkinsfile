@@ -27,7 +27,11 @@ pipeline {
                post {
                 success {
                     echo 'Now Archiving...'
+<<<<<<< HEAD
                     archiveArtifacts artifacts: '**/target/*.war'
+=======
+                    archiveArtifacts artifacts: '**/target/.war'
+>>>>>>> 541a7010e4c5208c005c4dcbae48b693e629bdb2
                 }
             }
            }
@@ -88,6 +92,7 @@ pipeline {
 
       }
 
+<<<<<<< HEAD
       post{
 	  always {
 	 	    echo 'slack Notifications.'
@@ -99,3 +104,7 @@ pipeline {
 }
 
 
+=======
+      
+}
+>>>>>>> 541a7010e4c5208c005c4dcbae48b693e629bdb2
