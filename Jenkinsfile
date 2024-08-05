@@ -27,11 +27,7 @@ pipeline {
                post {
                 success {
                     echo 'Now Archiving...'
-<<<<<<< HEAD
                     archiveArtifacts artifacts: '**/target/*.war'
-=======
-                    archiveArtifacts artifacts: '**/target/.war'
->>>>>>> 541a7010e4c5208c005c4dcbae48b693e629bdb2
                 }
             }
            }
@@ -89,22 +85,7 @@ pipeline {
                 )
             }
         }
-
-      }
-
-<<<<<<< HEAD
-      post{
-	  always {
-	 	    echo 'slack Notifications.'
-		    slackSend channel: '#cicd',
-			color:COLOR_MAP[currentBuild.currentResult],
-			message: "*${currentBuild.currentResult}:*Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at : ${env.BUILD_URL}"
-}
-}
+    }
 }
 
 
-=======
-      
-}
->>>>>>> 541a7010e4c5208c005c4dcbae48b693e629bdb2
